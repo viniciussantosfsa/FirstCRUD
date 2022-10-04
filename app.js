@@ -25,24 +25,22 @@ app.post("/products", (request, response) => {
     price,
     id: randomUUID(),
   };
-
   products.push(product);
-
   productsFile();
 
   return response.json(product);
 });
-
+// Lista todos os produtos
 app.get("/products", (request, response) => {
   return response.json(products);
 });
-// mostrar id
+// Procura pelo id 
 app.get("/products/:id", (request, response) => {
   const { id } = request.params;
   const product = products.find((product) => product.id === id);
   return response.json(product);
 });
-
+// Alterar o produto 
 app.put("/products/:id", (request, response) => {
   const { id } = request.params;
   const { name, price } = request.body;
@@ -53,18 +51,15 @@ app.put("/products/:id", (request, response) => {
     name,
     price,
   };
-
   productsFile();
 
   return response.json({ message: "Produto alterado com sucesso!" });
 });
-
+// Aqui é bem auto-explicativo
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;
   const productIndex = products.findIndex((product) => product.id === id);
-
   products.splice(productIndex, 1);
-
   productsFile();
 
   return response.json({ message: "Produto removido com sucesso!" });
