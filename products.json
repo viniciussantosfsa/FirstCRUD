@@ -1,17 +1,1 @@
-[
-  {
-    "name": "Camaro",
-    "price": 560000,
-    "id": "bffbea65-3cfe-481d-9c04-361d6866ce60"
-  },
-  {
-    "name": "Ferrari",
-    "price": 560000,
-    "id": "ace3d0b4-76e2-470a-8fcc-8761b1ae2a92"
-  },
-  {
-    "name": "Xereka",
-    "price": 560000,
-    "id": "1a84543c-cbed-4e7a-832d-3bd758dc4577"
-  }
-]
+[]
